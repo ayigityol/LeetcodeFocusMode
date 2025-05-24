@@ -10,6 +10,7 @@
       font-family: Arial, sans-serif;
       padding: 10px;
       width: 200px;
+      text-align: center;
     }
 
     .switch {
@@ -85,11 +86,19 @@
     #themeToggle.moon {
       color: #fff; /* Moon icon color */
     }
+    
+    .disable-cursor {
+      user-select: none;
+    }
+
   </style>
 </head>
-<body>
-  <h3>Leetcode Focus Mode</h3>
-  <label class="switch">
+<body class="disable-cursor">
+  <img src="icons/icon48.png" alt="Leetcode Focus Mode Logo">
+  <br>
+  <h3 >Leetcode Focus Mode</h3>
+
+  <label class="switch" >
     <input type="checkbox" id="focusModeToggle">
     <span class="slider"></span>
   </label>
