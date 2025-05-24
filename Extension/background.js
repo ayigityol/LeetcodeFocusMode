@@ -26,3 +26,20 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
     }
   }
 }, { url: [{ hostContains: 'leetcode.com' }] });
+
+// Listen for the new tab creation
+chrome.tabs.onCreated.addListener(function(tab) {
+  // Get the Focus Mode state from storage
+  chrome.storage.local.get(['focusModeEnabled'], function(result) {
+    if (result.focusModeEnabled) {
+      // Check if it's a new tab and block it by setting the URL to 'about:blank'
+      console.log(tab);
+      if (tab.url?.startsWith('edge://newtab/') || tab.pendingUrl?.startsWith('edge://newtab/') 
+          || tab.url?.startsWith('chrome://newtab/') || tab.pendingUrl?.startsWith('chrome://newtab/')) {
+        // Redirect to the custom landing page
+        chrome.tabs.update(tab.id, { url: 'focus_page.html' });  // Redirect to landing page
+      }
+    }
+  });
+});
+
