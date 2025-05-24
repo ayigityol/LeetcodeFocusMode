@@ -3,6 +3,7 @@
   "name": "Leetcode Focus Mode",
   "version": "1.0",
   "description": "Restrict browsing to Leetcode pages only and show a custom page when disabled.",
+  "author": "ayigityol",
   "permissions": [
     "tabs",
     "storage",
