@@ -1,0 +1,103 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leetcode Focus Mode</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 200px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      border-radius: 50%;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background-color: #4caf50;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* Dark theme */
+    .dark-theme {
+      background-color: #333;
+      color: white;
+    }
+
+    .dark-theme .slider {
+      background-color: #555;
+    }
+
+    .dark-theme .slider:before {
+      background-color: #fff;
+    }
+
+    /* Theme toggle icon styling */
+    #themeToggle {
+      font-size: 30px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #themeToggle.sun {
+      color: #ffcc00; /* Sun icon color */
+    }
+
+    #themeToggle.moon {
+      color: #fff; /* Moon icon color */
+    }
+  </style>
+</head>
+<body>
+  <h3>Leetcode Focus Mode</h3>
+  <label class="switch">
+    <input type="checkbox" id="focusModeToggle">
+    <span class="slider"></span>
+  </label>
+  <p>Enable Focus Mode</p>
+
+  <!-- Add sun and moon icons for theme toggle -->
+  <span id="themeToggle" class="sun">&#x2600;</span> <!-- Sun symbol -->
+
+  <script src="popup.js"></script>
+</body>
+</html>

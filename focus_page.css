@@ -1,0 +1,109 @@
+/* focus_page.css */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+h1 {
+  color: #333;
+}
+
+#message {
+  font-size: 20px;
+  color: #666;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff7043;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e64a19;
+}
+
+/* Dark theme */
+.dark-theme {
+  background-color: #333;
+  color: white;
+}
+
+.dark-theme button {
+  background-color: #444;
+}
+
+.dark-theme button:hover {
+  background-color: #666;
+}
+
+.dark-theme h1 {
+  color: #fff; /* Dark theme h1 color */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Sun and Moon icons */
+#themeToggle {
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#themeToggle.sun {
+  color: #ffcc00; /* Sun icon color */
+}
+
+#themeToggle.moon {
+  color: #fff; /* Moon icon color */
+}

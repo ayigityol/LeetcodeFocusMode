@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Leetcode Focus Mode",
+  "version": "1.0",
+  "description": "Restrict browsing to Leetcode pages only and show a custom page when disabled.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "http://leetcode.com/*",
+    "https://leetcode.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["focus_page.html", "focus_page.js", "focus_page.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
