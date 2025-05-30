@@ -2,6 +2,12 @@
 
 **Leetcode Focus Mode** is a browser extension designed to boost productivity by helping you stay focused while solving Leetcode problems. With this extension, you can ensure that distractions are kept at bay by restricting access to non-Leetcode sites when enabled. Whether you're grinding through coding challenges or taking a break, this extension helps you maintain control over your focus.
 
+## Marketplace
+### Microsoft Edge Browser Add-On
+https://microsoftedge.microsoft.com/addons/detail/leetcode-focus-mode/eegenigodgkigbjolbgphmgcadcjmpnd
+### Google Chrome Extension
+Soon
+
 ### **Features:**
 
 - **Focus Mode**: Block access to any site except Leetcode when focus mode is activated. Perfect for staying in the zone while solving algorithms.
